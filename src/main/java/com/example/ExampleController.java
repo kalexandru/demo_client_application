@@ -20,7 +20,7 @@ public class ExampleController {
     private DiscoveryClient discoveryClient;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String printAuthServicesInfo() {
+    public String printServicesInfo() {
         List<ServiceInstance> instanceList = discoveryClient.getInstances("demo-service-application");
         if (instanceList != null) {
             for (int i = 0; i < instanceList.size(); i++) {
